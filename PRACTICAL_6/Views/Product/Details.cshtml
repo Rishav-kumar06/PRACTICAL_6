@@ -1,0 +1,52 @@
+﻿@model PRACTICAL_6.Models.Product
+
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h2>Product Details</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+
+    <tr>
+        <th>Product ID</th>
+        <td>@Model.ProductId</td>
+    </tr>
+
+    <tr>
+        <th>Product Name</th>
+        <td>@Model.ProductName</td>
+    </tr>
+
+    <tr>
+        <th>Category</th>
+        <td>@Model.Category</td>
+    </tr>
+
+    <tr>
+        <th>Price</th>
+        <td>₹ @Model.Price</td>
+    </tr>
+
+    <tr>
+        <th>Description</th>
+        <td>@Model.Description</td>
+    </tr>
+
+    <tr>
+        <th>Product Image</th>
+        <td>
+            <img src="@Model.ImageUrl"
+                 width="250"
+                 height="200"
+                 alt="@Model.ProductName" />
+        </td>
+    </tr>
+
+</table>
+
+<br />
+
+<a href="/Product/Index">
+    Back to Product Catalog
+</a>
